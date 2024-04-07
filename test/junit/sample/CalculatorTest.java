@@ -64,7 +64,9 @@ public class CalculatorTest {
 		try {
 			cal.div(3, 0);
 			fail();
-		} catch (IllegalArgumentException e) {			
+		} catch (IllegalArgumentException e) {
+			// 例外が失敗したときのコメントについての比較もできる
+			assertEquals("第二引数に0が指定されました", e.getMessage());
 		}
 	}
 
